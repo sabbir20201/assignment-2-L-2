@@ -5,19 +5,19 @@ const mongoose_1 = require("mongoose");
 const orderProductSchema = new mongoose_1.Schema({
     email: {
         type: String,
-        required: true
+        required: true,
     },
     productId: {
         type: String,
-        required: true
+        required: true,
     },
     price: {
         type: Number,
-        required: true
+        required: true,
     },
     quantity: {
         type: Number,
-        required: true
-    }
+        required: true,
+    },
 });
-exports.orderProduct = (0, mongoose_1.model)("orderProduct", orderProductSchema);
+exports.orderProduct = (0, mongoose_1.model)('orderProduct', orderProductSchema);

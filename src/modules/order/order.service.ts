@@ -1,5 +1,5 @@
-import TorderProduct from "./order.interface";
-import { orderProduct } from "./order.model";
+import TorderProduct from './order.interface';
+import { orderProduct } from './order.model';
 
 const createOrderIntoBD = (payload: TorderProduct) => {
   const result = orderProduct.create(payload);

@@ -15,11 +15,17 @@ const createOrderIntoBD = (payload) => {
     const result = order_model_1.orderProduct.create(payload);
     return result;
 };
-const getAllOrderFromDB = () => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield order_model_1.orderProduct.find();
+const getAllOrderFromDB = (email) => __awaiter(void 0, void 0, void 0, function* () {
+    let result;
+    if (email) {
+        result = yield order_model_1.orderProduct.find({ email: email });
+    }
+    else {
+        result = yield order_model_1.orderProduct.find();
+    }
     return result;
 });
 exports.orderServices = {
     createOrderIntoBD,
-    getAllOrderFromDB
+    getAllOrderFromDB,
 };

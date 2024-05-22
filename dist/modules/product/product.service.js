@@ -19,7 +19,7 @@ const getAllProductsFromDB = (searchTerm) => __awaiter(void 0, void 0, void 0, f
     let result;
     if (searchTerm) {
         result = yield product_model_1.product.find({
-            name: { $regex: searchTerm, $options: "i" },
+            name: { $regex: searchTerm, $options: 'i' },
         });
     }
     else {

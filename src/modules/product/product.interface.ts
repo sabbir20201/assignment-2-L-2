@@ -8,12 +8,10 @@ export type TproductInventory = {
 };
 export type Tproduct = {
   name: string;
-  description : string;
+  description: string;
   price: number;
-  category : string;
+  category: string;
   tags: string[];
   variants: TproductVariant[];
   inventory: TproductInventory;
 };
-
-
