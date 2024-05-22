@@ -12,7 +12,7 @@ export type Tproduct = {
   price: number;
   category : string;
   tags: string[];
-  variants: [TproductVariant];
+  variants: TproductVariant[];
   inventory: TproductInventory;
 };
 
